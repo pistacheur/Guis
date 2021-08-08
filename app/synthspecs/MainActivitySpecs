@@ -1,0 +1,15 @@
+[CustomInputActions]
+
+[CustomOutputActions]
+[Assumptions]
+init
+X G ! init
+
+[Guarantees]
+init -> !done U mainPage.show
+init  -> !done U page2.hide
+
+G(buttonA.click -> !done U page2.show)
+G(buttonA.click -> !done U mainPage.hide)
+G(buttonBack.click -> !done U mainPage.show)
+G(buttonBack.click -> !done U page2.hide)
